@@ -13,4 +13,11 @@ export default defineConfig({
       '@shared-types': path.resolve(__dirname, '../types'),
     },
   },
+  server: {
+    // Native FS watching (FSEvents) is broken on this dev machine — recursive
+    // fs.watch delivers no events, so HMR silently dies. Polling re-stats files
+    // on an interval instead (mtimes update fine); this is the reliable local
+    // workaround. Not needed in CI/prod.
+    watch: { usePolling: true, interval: 300 },
+  },
 });
