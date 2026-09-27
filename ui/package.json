@@ -15,7 +15,7 @@
     "date-fns": "^4.0.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
     "@types/react": "^18.3.0",
